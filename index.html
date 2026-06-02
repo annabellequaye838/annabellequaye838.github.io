@@ -15,7 +15,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.7;
             color: #2c3e50;
-            background-color: #0f1419;
+            background: linear-gradient(135deg, #fef9f3 0%, #f5e6d3 100%);
             padding: 40px 20px;
             min-height: 100vh;
         }
@@ -23,14 +23,14 @@
         .container {
             max-width: 950px;
             margin: 0 auto;
-            background-color: #1a1f28;
+            background-color: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 20px 60px rgba(182, 157, 110, 0.15);
         }
         
         .header-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #7bc67b 0%, #9fe69f 100%);
             padding: 60px 50px;
             color: white;
             text-align: center;
@@ -45,7 +45,7 @@
             right: -50px;
             width: 300px;
             height: 300px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 105, 180, 0.15);
             border-radius: 50%;
         }
         
@@ -56,7 +56,7 @@
             left: -50px;
             width: 200px;
             height: 200px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 105, 180, 0.1);
             border-radius: 50%;
         }
         
@@ -105,7 +105,7 @@
         
         .main-content {
             padding: 50px;
-            color: #e0e0e0;
+            color: #4a4a4a;
         }
         
         section {
@@ -115,10 +115,10 @@
         h2 {
             font-size: 1.4em;
             font-weight: 700;
-            color: #667eea;
+            color: #7bc67b;
             margin-bottom: 25px;
             padding-bottom: 12px;
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #ff69b4;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 1.1em;
@@ -127,7 +127,7 @@
         .intro-text {
             font-size: 1.05em;
             line-height: 1.8;
-            color: #b8b8b8;
+            color: #666666;
             margin-bottom: 0;
             font-style: italic;
         }
@@ -135,6 +135,112 @@
         .job, .education, .project {
             margin-bottom: 32px;
             padding: 0;
+        }
+        
+        .product {
+            margin-bottom: 32px;
+            padding: 0;
+        }
+        
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .product-name {
+            font-weight: 700;
+            font-size: 1.15em;
+            color: #ffffff;
+        }
+        
+        .price {
+            font-weight: 700;
+            font-size: 1.3em;
+            color: #ff69b4;
+        }
+        
+        .product-brand {
+            color: #7bc67b;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .product-description {
+            color: #666666;
+            font-size: 0.95em;
+            margin: 12px 0;
+            line-height: 1.7;
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background-color: rgba(123, 198, 123, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(123, 198, 123, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background-color: rgba(255, 105, 180, 0.1);
+            border-color: #ff69b4;
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .feature-tag {
+            color: #7bc67b;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-tag {
+            color: #ff69b4;
+        }
+        
+        .testimonial {
+            margin-bottom: 28px;
+            padding: 20px;
+            background-color: rgba(123, 198, 123, 0.08);
+            border-left: 4px solid #ff69b4;
+            border-radius: 6px;
+        }
+        
+        .stars {
+            color: #ff69b4;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .testimonial-text {
+            color: #666666;
+            font-size: 0.95em;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        
+        .testimonial-author {
+            color: #7bc67b;
+            font-weight: 600;
+            font-size: 0.9em;
         }
         
         .job-header {
@@ -152,13 +258,13 @@
         }
         
         .company {
-            color: #667eea;
+            color: #ff69b4;
             font-weight: 600;
             font-size: 1.05em;
         }
         
         .dates {
-            color: #888;
+            color: #999999;
             font-size: 0.9em;
             font-weight: 500;
         }
@@ -173,7 +279,7 @@
         }
         
         .job-description {
-            color: #b8b8b8;
+            color: #666666;
             font-size: 0.95em;
             margin-bottom: 12px;
             line-height: 1.7;
@@ -186,7 +292,7 @@
         
         li {
             margin-bottom: 8px;
-            color: #b8b8b8;
+            color: #666666;
             padding-left: 20px;
             position: relative;
             font-size: 0.95em;
@@ -196,7 +302,7 @@
             content: '▸';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #ff69b4;
             font-weight: bold;
         }
         
@@ -208,19 +314,20 @@
         }
         
         .skill-tag {
-            background-color: rgba(102, 126, 234, 0.2);
-            color: #9fb3ff;
+            background-color: rgba(123, 198, 123, 0.15);
+            color: #7bc67b;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.9em;
             font-weight: 600;
-            border: 1px solid #667eea;
+            border: 1px solid #7bc67b;
             transition: all 0.3s ease;
         }
         
         .skill-tag:hover {
-            background-color: rgba(102, 126, 234, 0.3);
-            color: #ffffff;
+            background-color: rgba(255, 105, 180, 0.15);
+            color: #ff69b4;
+            border-color: #ff69b4;
             transform: translateY(-2px);
         }
         
@@ -240,7 +347,7 @@
         }
         
         .school {
-            color: #667eea;
+            color: #ff69b4;
             font-weight: 600;
             font-size: 1.05em;
         }
@@ -254,19 +361,19 @@
         footer {
             text-align: center;
             padding: 30px 50px;
-            border-top: 1px solid #2a2f3a;
-            color: #666;
+            border-top: 1px solid #e8d4c0;
+            color: #999999;
             font-size: 0.85em;
         }
         
         footer a {
-            color: #667eea;
+            color: #7bc67b;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         footer a:hover {
-            color: #9fb3ff;
+            color: #ff69b4;
         }
         
         @media (max-width: 768px) {
@@ -297,113 +404,125 @@
     <div class="container">
         <div class="header-section">
             <div class="header-content">
-                <h1>Annabelle Quaye</h1>
-                <div class="title">Your Professional Title</div>
+                <h1>Matcha & Co</h1>
+                <div class="title">Premium Matcha & Wellness</div>
                 <div class="contact-info">
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
-                    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-                    <a href="https://github.com/annabellequaye838">GitHub</a>
+                    <a href="mailto:hello@matchaandco.com">hello@matchaandco.com</a>
                     <a href="tel:+1234567890">+1 (234) 567-8900</a>
+                    <a href="#products">Shop Now</a>
                 </div>
             </div>
         </div>
 
         <div class="main-content">
             <section>
-                <h2>About</h2>
-                <p class="intro-text">Results-driven professional with expertise in [your field]. Passionate about [your passion], with a track record of [key achievement]. Seeking to leverage [skills] to drive impact in [target area].</p>
+                <h2>Welcome to Matcha & Co</h2>
+                <p class="intro-text">Discover the finest ceremonial-grade matcha from Japan. Handpicked, ethically sourced, and delivered fresh to your door. Elevate your wellness journey with our premium matcha collection.</p>
             </section>
 
-            <section>
-                <h2>Experience</h2>
+            <section id="products">
+                <h2>Our Products</h2>
                 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Senior Role Title</div>
-                        <div class="dates">Jan 2023 – Present</div>
+                <div class="product">
+                    <div class="product-header">
+                        <div class="product-name">Premium Ceremonial Matcha</div>
+                        <div class="price">$34.99</div>
                     </div>
-                    <div class="company">Company Name</div>
-                    <p class="job-description">Brief description of the role and what you accomplished.</p>
+                    <div class="product-brand">Pure Grade A Matcha</div>
+                    <p class="product-description">Our flagship offering - vibrant green, smooth taste, perfect for traditional whisking or everyday lattes.</p>
                     <ul>
-                        <li>Major achievement with quantifiable results (e.g., increased efficiency by X%)</li>
-                        <li>Led team/project that resulted in [specific outcome]</li>
-                        <li>Implemented solution that [business impact]</li>
-                        <li>Collaborated with stakeholders to deliver [project/feature]</li>
+                        <li>100% pure matcha powder, no additives</li>
+                        <li>Sourced from family farms in Japan</li>
+                        <li>30g tin (approximately 30 servings)</li>
+                        <li>Free bamboo whisk with first purchase</li>
                     </ul>
                 </div>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Previous Job Title</div>
-                        <div class="dates">Jun 2021 – Dec 2022</div>
+                <div class="product">
+                    <div class="product-header">
+                        <div class="product-name">Matcha Latte Mix</div>
+                        <div class="price">$24.99</div>
                     </div>
-                    <div class="company">Previous Company</div>
-                    <p class="job-description">Brief description of responsibilities and accomplishments.</p>
+                    <div class="product-brand">Organic Matcha Blend</div>
+                    <p class="product-description">Pre-blended with creamy vanilla and organic coconut sugar for instant lattes.</p>
                     <ul>
-                        <li>Key achievement or responsibility with impact</li>
-                        <li>Developed or improved process/feature</li>
-                        <li>Mentored team members or led initiatives</li>
+                        <li>Easy to mix - no whisk required</li>
+                        <li>Organic ingredients only</li>
+                        <li>Perfect for busy mornings</li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-header">
+                        <div class="product-name">Detox Wellness Bundle</div>
+                        <div class="price">$54.99</div>
+                    </div>
+                    <div class="product-brand">Complete Set</div>
+                    <p class="product-description">Everything you need to start your matcha journey - ceremonial matcha, whisk, bowl, and guide.</p>
+                    <ul>
+                        <li>Premium matcha powder (40g)</li>
+                        <li>Traditional bamboo whisk</li>
+                        <li>Ceramic matcha bowl</li>
+                        <li>Brewing guide and recipe book</li>
                     </ul>
                 </div>
             </section>
 
             <section>
-                <h2>Education</h2>
-                
-                <div class="education">
-                    <div class="education-header">
-                        <div class="degree">Bachelor of Science in Your Field</div>
-                        <div class="dates">Graduation: May 2021</div>
+                <h2>Why Choose Us</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <span class="feature-icon">🌿</span>
+                        <span class="feature-tag">100% Organic</span>
                     </div>
-                    <div class="school">University Name</div>
-                    <div class="education-details">
-                        GPA: 3.8/4.0 | Dean's List: 2019-2021
+                    <div class="feature-item">
+                        <span class="feature-icon">✈️</span>
+                        <span class="feature-tag">Direct from Japan</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">♻️</span>
+                        <span class="feature-tag">Sustainable</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💚</span>
+                        <span class="feature-tag">Ethically Sourced</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚚</span>
+                        <span class="feature-tag">Free Shipping 50+</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💝</span>
+                        <span class="feature-tag">100% Satisfaction</span>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2>Skills & Expertise</h2>
-                <div class="skills-container">
-                    <span class="skill-tag">Skill 1</span>
-                    <span class="skill-tag">Skill 2</span>
-                    <span class="skill-tag">Skill 3</span>
-                    <span class="skill-tag">Skill 4</span>
-                    <span class="skill-tag">Skill 5</span>
-                    <span class="skill-tag">Skill 6</span>
-                    <span class="skill-tag">Skill 7</span>
-                    <span class="skill-tag">Skill 8</span>
-                </div>
-            </section>
-
-            <section>
-                <h2>Projects & Achievements</h2>
+                <h2>Customer Love</h2>
                 
-                <div class="project">
-                    <div class="job-header">
-                        <div class="job-title">Project Name</div>
-                        <div class="dates">2023</div>
-                    </div>
-                    <p class="job-description">Description of the project and your specific contributions.</p>
-                    <ul>
-                        <li>Key feature or technical achievement</li>
-                        <li>Technologies used: [tech 1], [tech 2], [tech 3]</li>
-                        <li>Result or impact achieved</li>
-                    </ul>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"This is hands down the best matcha I've ever tried! The flavor is incredible and the quality is unmatched. I'm already reordering!"</p>
+                    <div class="testimonial-author">- Sarah M.</div>
                 </div>
 
-                <div class="project">
-                    <div class="job-header">
-                        <div class="job-title">Another Notable Project</div>
-                        <div class="dates">2022</div>
-                    </div>
-                    <p class="job-description">What made this project interesting and what you accomplished.</p>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The bundle was the perfect starter kit. Great value and the included accessories are high quality. Highly recommend!"</p>
+                    <div class="testimonial-author">- James L.</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally found a matcha brand I trust. Fast shipping, authentic product, and amazing customer service. 10/10!"</p>
+                    <div class="testimonial-author">- Maya P.</div>
                 </div>
             </section>
         </div>
 
         <footer>
-            <p>Last updated: June 2026 | <a href="https://github.com/annabellequaye838/annabellequaye838.github.io">View Source Code</a></p>
+            <p>© 2026 Matcha & Co. All rights reserved. | <a href="#products">Shop</a> • <a href="mailto:hello@matchaandco.com">Contact</a> • Free shipping on orders over $50</p>
         </footer>
     </div>
 </body>
