@@ -3,7 +3,499 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annabelle Quaye - Resume</title>
+    <title>Matcha & Co - Premium Matcha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #2a2a2a;
+            background-color: #f5f3f0;
+            line-height: 1.6;
+        }
+
+        /* DIRTY GREEN COLOR SCHEME */
+        :root {
+            --dirty-green: #5a6e52;
+            --sage-green: #7a8f6f;
+            --olive: #6b7d63;
+            --light-sage: #9daa93;
+            --cream: #faf8f5;
+            --dark: #2a2a2a;
+        }
+
+        header {
+            background: var(--cream);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--dirty-green);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            font-weight: 900;
+            color: var(--dirty-green);
+            letter-spacing: -2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--dirty-green);
+        }
+
+        .cta-button {
+            background: var(--dirty-green);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: 2px solid var(--dirty-green);
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--dirty-green);
+        }
+
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 60px 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--dirty-green);
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .hero-content h1 span {
+            color: var(--sage-green);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: var(--dirty-green);
+            color: white;
+            padding: 18px 50px;
+            border: 2px solid var(--dirty-green);
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--dirty-green);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--dirty-green);
+            padding: 18px 50px;
+            border: 2px solid var(--dirty-green);
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--dirty-green);
+            color: white;
+        }
+
+        .hero-image {
+            text-align: center;
+            font-size: 10em;
+            opacity: 0.9;
+        }
+
+        .products {
+            max-width: 1400px;
+            margin: 100px auto;
+            padding: 0 60px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 80px;
+            color: var(--dark);
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .section-title span {
+            color: var(--dirty-green);
+        }
+
+        .section-subtitle {
+            font-size: 0.9em;
+            color: var(--dirty-green);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 40px 30px;
+            transition: all 0.3s;
+            border-top: 4px solid var(--dirty-green);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(90, 110, 82, 0.15);
+        }
+
+        .product-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .product-price {
+            font-size: 2.2em;
+            color: var(--dirty-green);
+            font-weight: 900;
+            margin: 20px 0 25px;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            font-size: 0.95em;
+        }
+
+        .benefits {
+            background: var(--dirty-green);
+            color: white;
+            padding: 100px 60px;
+            margin: 100px 0;
+        }
+
+        .benefits-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .benefits h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .benefits p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .benefit-list {
+            list-style: none;
+        }
+
+        .benefit-list li {
+            font-size: 1em;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 300;
+        }
+
+        .benefit-list li::before {
+            content: '○';
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            color: var(--light-sage);
+            font-weight: bold;
+        }
+
+        .testimonials {
+            max-width: 1400px;
+            margin: 100px auto;
+            padding: 0 60px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid var(--sage-green);
+        }
+
+        .stars {
+            color: var(--dirty-green);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--dirty-green);
+            font-size: 0.95em;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 60px;
+            margin-top: 100px;
+            font-weight: 300;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--light-sage);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 30px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 30px;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .benefits-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .products {
+                padding: 0 30px;
+            }
+
+            .testimonials {
+                padding: 0 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MATCHA & CO</div>
+            <ul>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="mailto:hello@matchaandco.com" class="cta-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium <span>Matcha</span> Redefined</h1>
+            <p>Ethically sourced from the mountains of Japan. Pure ceremonial grade matcha for the discerning palate.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Shop Now</button>
+                <button class="btn-secondary">Explore</button>
+            </div>
+        </div>
+        <div class="hero-image">🍵</div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="section-subtitle">Our Collection</div>
+        <h2 class="section-title">Curated <span>Selections</span></h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-icon">🥤</div>
+                <h3>Ceremonial Grade</h3>
+                <p class="product-price">$34.99</p>
+                <p>Pure, vibrant, and ceremonial-grade. The finest matcha for traditional whisking.</p>
+                <button class="btn-primary">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">☕</div>
+                <h3>Daily Blend</h3>
+                <p class="product-price">$24.99</p>
+                <p>Smooth and versatile. Perfect for lattes, smoothies, and everyday enjoyment.</p>
+                <button class="btn-primary">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🎁</div>
+                <h3>Starter Kit</h3>
+                <p class="product-price">$54.99</p>
+                <p>Everything you need. Matcha, whisk, bowl, and brewing guide included.</p>
+                <button class="btn-primary">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits" id="benefits">
+        <div class="benefits-content">
+            <div>
+                <h2>Why <span style="color: var(--light-sage); font-style: italic;">Choose</span> Matcha</h2>
+                <p>Experience the ancient tradition meets modern wellness. Each sip delivers sustained energy, mental clarity, and antioxidant richness.</p>
+            </div>
+            <ul class="benefit-list">
+                <li>100% Organic & Ceremonial Grade</li>
+                <li>Direct from Family Farms in Japan</li>
+                <li>Sustainably & Ethically Sourced</li>
+                <li>137x More Antioxidants Than Green Tea</li>
+                <li>Natural Caffeine + L-Theanine Focus</li>
+                <li>Free Shipping on Orders Over $50</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials" id="reviews">
+        <div class="section-subtitle">Customer Stories</div>
+        <h2 class="section-title">People <span>Love</span> Our Matcha</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"This is the finest matcha I've encountered. The depth of flavor and purity is uncompromising. Worth every penny."</p>
+                <div class="testimonial-author">— Sarah M.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The starter kit elevated my entire matcha experience. Authentic, beautiful, and everything works perfectly together."</p>
+                <div class="testimonial-author">— James L.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Finally found a brand that respects the tradition. The quality and care behind each product is evident. Highly recommend."</p>
+                <div class="testimonial-author">— Maya P.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Matcha & Co. Ethically Sourced. Responsibly Grown.</p>
+        <p><a href="mailto:hello@matchaandco.com">hello@matchaandco.com</a> | Free shipping on orders over $50</p>
+    </footer>
+</body>
+</html>
     <style>
         * {
             margin: 0;
@@ -339,7 +831,7 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        
+         
         .degree {
             font-weight: 700;
             font-size: 1.15em;
